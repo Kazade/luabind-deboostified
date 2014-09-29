@@ -30,10 +30,10 @@
 #include <luabind/detail/ref.hpp>
 #include <type_traits>	// std::aligned_storage
 
-namespace luabind { 
-	
+namespace luabind {
+
 	namespace detail {
-		
+
 		void finalize(lua_State* L, class_rep* crep);
 
 		// this class is allocated inside lua for each pointer.
@@ -76,9 +76,9 @@ namespace luabind {
 				if (size <= 32) {
 					return &m_instance_buffer;
 				} else {
-					return std::malloc(size);
+					return ::malloc(size);
 				}
-			
+
 			}
 
 			void deallocate(void* storage)
@@ -86,7 +86,7 @@ namespace luabind {
 				if (storage == &m_instance_buffer) {
 					return;
 				} else {
-					std::free(storage);
+					::free(storage);
 				}
 			}
 
@@ -133,4 +133,3 @@ namespace luabind {
 }	// namespace luabind
 
 #endif // LUABIND_OBJECT_REP_HPP_INCLUDED
-
