@@ -136,7 +136,7 @@ namespace luabind
 	}
 } // namespace luabind::detail
 
-
+/*
 namespace luabind { namespace
 {
   static meta::index<0> return_value;
@@ -144,7 +144,7 @@ namespace luabind { namespace
   static meta::index<1> _1;
   static meta::index<2> _2;
   static meta::index<3> _3;
-}}
+}}*/
 
 #endif // LUABIND_POLICY_HPP_INCLUDED
 

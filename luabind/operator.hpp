@@ -330,13 +330,15 @@ namespace luabind {
 
 #undef LUABIND_UNARY_OPERATOR
 
+    /*
     namespace {
 
         self_type self;
         const_self_type const_self;
 
     } // namespace unnamed
-    
+    */
+
 } // namespace luabind
 
 #endif // OPERATOR_040729_HPP
